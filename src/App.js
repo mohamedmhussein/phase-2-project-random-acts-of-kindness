@@ -1,7 +1,8 @@
+import { Route, Switch } from "react-router-dom";
 import Navbar from "./Navbar";
 import NewPost from "./NewPost";
-import Post from "./Post";
 import OthersPosts from "./OthersPosts";
+import MyKindness from "./MyKindness";
 function App() {
   const backgroundStyle = {
     backgroundImage: `url("/assets/background2.jpg")`,
@@ -19,8 +20,17 @@ function App() {
   return (
     <div style={backgroundStyle2} >
       <Navbar />
-      <OthersPosts />
-      {/* <Post /> */}
+      <Switch>
+      <Route exact path="/">
+        <OthersPosts />
+      </Route>
+      <Route exact path="/MyKindness">
+        <MyKindness />
+      </Route>
+      <Route exact path="/NewKindness">
+        <NewPost />
+      </Route>
+      </Switch>
     </div>
   );
 }
