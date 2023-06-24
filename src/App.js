@@ -11,6 +11,8 @@ function App() {
     <div style={backgroundStyle}>
       <Navbar />
       <Post />
+      <Post />
+      <Post />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 function Post() {
-
+    const buttonClasses = "button is-warning has-text-weight-semibold is-rounded"
     return (
-        <article className="columns">
+        <div className="columns my-6 ">
             <div className="box column is-half is-offset-3 content is-normal " style={{ opacity: "70%" }}>
                 <button class="column delete is-offset-11  is-1 mt-4"></button>
                 <h1 className="my-1 has-text-centered is-6 "> Helping Emily </h1>
@@ -10,24 +10,24 @@ function Post() {
                 </p>
                 <div class="field is-grouped mx-5">
                     <p class="control">
-                        <button class="button is-warning">
+                        <button class={buttonClasses}>
                             <i class="fa-solid fa-heart mr-2 has-text-danger"></i> Like
                         </button>
                     </p>
                     <p class="control">
-                        <button class="button is-warning">
+                        <button class={buttonClasses}>
                             <i class="fa-solid fa-circle-check mr-2 has-text-success"></i>I did it!
                         </button>
                     </p>
-                    <p class="control">
-                        <button class="button is-warning">
-                        <i class="fa-sharp fa-solid fa-flag-swallowtail"></i> I will do it!
+                    <p class="control ">
+                        <button class={buttonClasses}>
+                            💪 I will do it!
                         </button>
                     </p>
                 </div>
             </div>
 
-        </article>
+        </div>
     )
 }
 
