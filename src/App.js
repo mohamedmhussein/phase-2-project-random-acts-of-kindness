@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
-import Post
-  from "./Post";
+import NewPost from "./NewPost";
+import Post from "./Post";
 function App() {
   const backgroundStyle = {
     backgroundImage: `url("/assets/background2.jpg")`,
@@ -10,9 +10,7 @@ function App() {
   return (
     <div style={backgroundStyle}>
       <Navbar />
-      <Post />
-      <Post />
-      <Post />
+      <NewPost />
     </div>
   );
 }
