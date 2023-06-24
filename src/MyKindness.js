@@ -3,10 +3,12 @@ import Post from "./Post";
 function MyKindness() {
 
     return (
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        <div>
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+        </div>
     )
 }
 
