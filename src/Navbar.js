@@ -3,7 +3,7 @@ function Navbar() {
     const navItemClasses = "navbar-item has-text-weight-semibold is-tab"
 
     return (
-        <nav className="navbar is-info has-shadow is-warning ">
+        <nav className="navbar is-info is-warning ">
             <div className="navbar-brand ">
                 <a className="navbar-item" href="#" >
                     <img src="/assets/logo-trans.png" style={{ maxHeight: "7vh" }} />
