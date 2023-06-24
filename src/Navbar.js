@@ -1,9 +1,8 @@
 
 function Navbar() {
-    const navItemClasses = "navbar-item has-text-weight-semibold is-tab"
-
+    const navItemClasses = "navbar-item has-text-weight-semibold is-tab has-text-grey-dark"
     return (
-        <nav className="navbar is-info is-warning has-text-grey-dark">
+        <nav className="navbar is-info has-text-grey-dark has-background-danger-light">
             <div className="navbar-brand ">
                 <a className="navbar-item" href="#" >
                     <img src="/assets/logo-trans.png" style={{ maxHeight: "7vh" }} />
