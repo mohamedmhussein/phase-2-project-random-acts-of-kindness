@@ -8,12 +8,12 @@
         {
             "id": 2,
             "title": "Helping Emily",
-            "prompt": "Emily had recently lost her mother after a long battle with illness. Overwhelmed with grief, she found it difficult to navigate her daily life. Recognizing Emily's struggle, I went above and beyond to provide support. I prepared meals for Emily, took care of household chores, and even researched local support groups for her to join. My consistent acts of kindness helped alleviate some of Emily's burdens, allowing her to focus on her healing process and reminding her that she was not alone in her grief."
+            "act": "Emily had recently lost her mother after a long battle with illness. Overwhelmed with grief, she found it difficult to navigate her daily life. Recognizing Emily's struggle, I went above and beyond to provide support. I prepared meals for Emily, took care of household chores, and even researched local support groups for her to join. My consistent acts of kindness helped alleviate some of Emily's burdens, allowing her to focus on her healing process and reminding her that she was not alone in her grief."
         },
         {
             "id": 3,
             "title": "Charity Act",
-            "prompt": "During a devastating flood that affected an entire neighborhood, many families lost their homes and belongings. In response to the crisis, I organized a donation drive. I reached out to her community, urging them to contribute essential items such as clothing, food, and toiletries. My team and I collected the donations, sorted and packed them, and personally distributed them to the affected families. Such acts of kindness not only provided immediate relief, but also demonstrated the power of community support and unity during difficult times."
+            "act": "During a devastating flood that affected an entire neighborhood, many families lost their homes and belongings. In response to the crisis, I organized a donation drive. I reached out to her community, urging them to contribute essential items such as clothing, food, and toiletries. My team and I collected the donations, sorted and packed them, and personally distributed them to the affected families. Such acts of kindness not only provided immediate relief, but also demonstrated the power of community support and unity during difficult times."
         }
     ],
     "user2": [
@@ -25,12 +25,12 @@
         {
             "id": 2,
             "title": "Helping Emily",
-            "prompt": "Emily had recently lost her mother after a long battle with illness. Overwhelmed with grief, she found it difficult to navigate her daily life. Recognizing Emily's struggle, I went above and beyond to provide support. I prepared meals for Emily, took care of household chores, and even researched local support groups for her to join. My consistent acts of kindness helped alleviate some of Emily's burdens, allowing her to focus on her healing process and reminding her that she was not alone in her grief."
+            "act": "Emily had recently lost her mother after a long battle with illness. Overwhelmed with grief, she found it difficult to navigate her daily life. Recognizing Emily's struggle, I went above and beyond to provide support. I prepared meals for Emily, took care of household chores, and even researched local support groups for her to join. My consistent acts of kindness helped alleviate some of Emily's burdens, allowing her to focus on her healing process and reminding her that she was not alone in her grief."
         },
         {
             "id": 3,
             "title": "Charity Act",
-            "prompt": "During a devastating flood that affected an entire neighborhood, many families lost their homes and belongings. In response to the crisis, I organized a donation drive. I reached out to her community, urging them to contribute essential items such as clothing, food, and toiletries. My team and I collected the donations, sorted and packed them, and personally distributed them to the affected families. Such acts of kindness not only provided immediate relief, but also demonstrated the power of community support and unity during difficult times."
+            "act": "During a devastating flood that affected an entire neighborhood, many families lost their homes and belongings. In response to the crisis, I organized a donation drive. I reached out to her community, urging them to contribute essential items such as clothing, food, and toiletries. My team and I collected the donations, sorted and packed them, and personally distributed them to the affected families. Such acts of kindness not only provided immediate relief, but also demonstrated the power of community support and unity during difficult times."
         }
     ],
     "user3": [
@@ -42,12 +42,12 @@
         {
             "id": 2,
             "title": "Helping Emily",
-            "prompt": "Emily had recently lost her mother after a long battle with illness. Overwhelmed with grief, she found it difficult to navigate her daily life. Recognizing Emily's struggle, I went above and beyond to provide support. I prepared meals for Emily, took care of household chores, and even researched local support groups for her to join. My consistent acts of kindness helped alleviate some of Emily's burdens, allowing her to focus on her healing process and reminding her that she was not alone in her grief."
+            "act": "Emily had recently lost her mother after a long battle with illness. Overwhelmed with grief, she found it difficult to navigate her daily life. Recognizing Emily's struggle, I went above and beyond to provide support. I prepared meals for Emily, took care of household chores, and even researched local support groups for her to join. My consistent acts of kindness helped alleviate some of Emily's burdens, allowing her to focus on her healing process and reminding her that she was not alone in her grief."
         },
         {
             "id": 3,
             "title": "Charity Act",
-            "prompt": "During a devastating flood that affected an entire neighborhood, many families lost their homes and belongings. In response to the crisis, I organized a donation drive. I reached out to her community, urging them to contribute essential items such as clothing, food, and toiletries. My team and I collected the donations, sorted and packed them, and personally distributed them to the affected families. Such acts of kindness not only provided immediate relief, but also demonstrated the power of community support and unity during difficult times."
+            "act": "During a devastating flood that affected an entire neighborhood, many families lost their homes and belongings. In response to the crisis, I organized a donation drive. I reached out to her community, urging them to contribute essential items such as clothing, food, and toiletries. My team and I collected the donations, sorted and packed them, and personally distributed them to the affected families. Such acts of kindness not only provided immediate relief, but also demonstrated the power of community support and unity during difficult times."
         }
     ]
 }
