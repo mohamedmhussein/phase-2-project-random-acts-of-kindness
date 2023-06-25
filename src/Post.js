@@ -1,13 +1,13 @@
-import  "./Post.css"
-function Post({ p }) {
+import "./Post.css"
+function Post({ act, title }) {
     const buttonClasses = "button is-warning has-text-weight-semibold is-rounded"
     return (
         <div className="columns my-6 ">
-            <div className="box column mx-6 content is-normal " style={{ opacity: "70%" }}>
-                <button class="column delete is-offset-11  is-1 mt-4"></button>
-                <h1 className="my-1 has-text-centered is-6 "> Helping Emily </h1>
+            <div className="box column mx-6 content is-normal " style={{ opacity: "195%" }}>
+                <button className="column delete is-offset-11  is-1 mt-4"></button>
+                <h1 className="my-1 has-text-centered is-6 "> {title} </h1>
                 <p className="column mx-4 has-text-justified" style={{ height: "15em", overflowY: "scroll" }}>
-                    {p}
+                    {act}
                 </p>
                 <div className="field is-grouped mx-5 columns mb-1">
                     <p className="control column has-text-centered">

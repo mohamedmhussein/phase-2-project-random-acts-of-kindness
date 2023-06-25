@@ -6,14 +6,14 @@ function Navbar() {
         <nav className="navbar is-info has-text-grey-dark has-background-danger-light">
             <div className="navbar-brand ">
                 <a className="navbar-item" href="#" >
-                    <img src="/assets/logo-trans.png" style={{ maxHeight: "7vh" }} />
+                    <img src="/assets/logo-trans.png" style={{ maxHeight: "4.5vh" }} />
                 </a>
             </div>
             <div className="navbar-menu navbar-end mr-3 ">
-                <Link to="/" exact><a className={navItemClasses}>Home</a></Link>
-                <Link to="/MyKindness" exact><a className={navItemClasses}>My Kindness</a></Link>
-                <Link to="/NewKindness" exact><a className={navItemClasses}>New Kindness</a></Link>
-                <Link to="/" exact><a className={navItemClasses}>Sign in</a></Link>
+                <Link to="/" exact="true" ><a className={navItemClasses}>Home</a></Link>
+                <Link to="/MyKindness" ><a className={navItemClasses}>My Kindness</a></Link>
+                <Link to="/NewKindness" ><a className={navItemClasses}>New Kindness</a></Link>
+                <Link to="/" exact="true"><a className={navItemClasses}>Sign in</a></Link>
             </div>
         </nav>
     )

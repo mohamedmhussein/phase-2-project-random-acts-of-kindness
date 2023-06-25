@@ -1,5 +1,5 @@
 {
-    "User1": [
+    "user1": [
         {
             "id": 1,
             "title": "Cold Winter",
@@ -16,7 +16,7 @@
             "prompt": "During a devastating flood that affected an entire neighborhood, many families lost their homes and belongings. In response to the crisis, I organized a donation drive. I reached out to her community, urging them to contribute essential items such as clothing, food, and toiletries. My team and I collected the donations, sorted and packed them, and personally distributed them to the affected families. Such acts of kindness not only provided immediate relief, but also demonstrated the power of community support and unity during difficult times."
         }
     ],
-    "User2": [
+    "user2": [
         {
             "id": 1,
             "title": "Cold Winter",
@@ -33,7 +33,7 @@
             "prompt": "During a devastating flood that affected an entire neighborhood, many families lost their homes and belongings. In response to the crisis, I organized a donation drive. I reached out to her community, urging them to contribute essential items such as clothing, food, and toiletries. My team and I collected the donations, sorted and packed them, and personally distributed them to the affected families. Such acts of kindness not only provided immediate relief, but also demonstrated the power of community support and unity during difficult times."
         }
     ],
-    "User3": [
+    "user3": [
         {
             "id": 1,
             "title": "Cold Winter",
