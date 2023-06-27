@@ -8,16 +8,17 @@ function MyKindness({ user }) {
 
     //Fetching my kindness acts from the json server
     useEffect(() => {
-        fetch(`http://localhost:3000/${user}`)
+        fetch(`http://localhost:3000/users`)
             .then(res => res.json())
             .then(userData => {
+                //console.log(userData)
                 extractUserData(userData)
             })
     }, [user])
 
     // extracting the data from the fetching
     function extractUserData(data) {
-        setMyPostsArray(data)
+        setMyPostsArray(data[0][`${user}`])
     }
 
     //construct the JSX of each post using mapping

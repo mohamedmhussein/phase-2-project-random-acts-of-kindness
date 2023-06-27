@@ -1,5 +1,15 @@
 import Post from "./Post"
+import { useState, useEffect } from "react"
 function OthersPosts({ user }) {
+
+    // useEffect(() => {
+    //     fetch("http://localhost:3000")
+    //         .then(res => res.json())
+    //         .then(users => {
+    //             console.log(users)
+    //         })
+    // }, [])
+
     return (
         <div className="columns is-multiline">
             <div className="column is-half">

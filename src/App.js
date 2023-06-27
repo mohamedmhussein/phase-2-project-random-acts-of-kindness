@@ -23,13 +23,13 @@ function App() {
     <div style={backgroundStyle2} >
       <Navbar />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/users">
           <OthersPosts user={currentUser} />
         </Route>
-        <Route exact path="/MyKindness">
+        <Route exact path="/users/MyKindness">
           <MyKindness user={currentUser} />
         </Route>
-        <Route exact path="/NewKindness">
+        <Route exact path="/users/NewKindness">
           <NewPost />
         </Route>
       </Switch>
