@@ -1,11 +1,12 @@
 import "./Post.css"
-function Post({ act, title }) {
+function Post({ act, title, user }) {
     const buttonClasses = "button is-warning has-text-weight-semibold is-rounded"
     return (
         <div className="columns my-6 ">
             <div className="box column mx-6 content is-normal " style={{ opacity: "195%" }}>
                 <button className="column delete is-offset-11  is-1 mt-4"></button>
                 <h1 className="my-1 has-text-centered is-6 "> {title} </h1>
+                {{user} ? <h4 className="my-1 has-text-centered is-6 has-text-weight-light	"> By: {user} </h4> : {}}
                 <p className="column mx-4 has-text-justified" style={{ height: "15em", overflowY: "scroll" }}>
                     {act}
                 </p>

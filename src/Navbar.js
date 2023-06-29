@@ -10,10 +10,9 @@ function Navbar() {
                 </a>
             </div>
             <div className="navbar-menu navbar-end mr-3 ">
-                <Link to="/users" exact="true" ><a className={navItemClasses}>Home</a></Link>
+                <Link to="/" exact="true" ><a className={navItemClasses}>Home</a></Link>
                 <Link to="/users/MyKindness" exact="true" ><a className={navItemClasses}>My Kindness</a></Link>
                 <Link to="/users/NewKindness" exact="true" ><a className={navItemClasses}>New Kindness</a></Link>
-                <Link to="/users" exact="true"><a className={navItemClasses}>Sign in</a></Link>
             </div>
         </nav>
     )

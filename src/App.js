@@ -23,7 +23,7 @@ function App() {
     <div style={backgroundStyle2} >
       <Navbar />
       <Switch>
-        <Route exact path="/users">
+        <Route exact path="/">
           <OthersPosts currentUser={currentUser} />
         </Route>
         <Route exact path="/users/MyKindness">
