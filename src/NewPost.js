@@ -1,6 +1,6 @@
 import userEvent from "@testing-library/user-event"
 import { useState } from "react"
-function NewPost() {
+function NewPost(user) {
 
     const [formData, setFormData] = useState({ username: "", title: "", act: "" })
 
@@ -23,12 +23,16 @@ function NewPost() {
             .then(r => r.json())
             .then(data => {
                 const usersList = Object.keys(data[0])
-                usersList.includes(formData.username) ? addNewUser(formData.username) : updateUser(formData.username)
+                usersList.includes(user) ? addNewUser(user) : updateUser(user)
             })
 
     }
     function addNewUser(user) {
-        
+        const configObj = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title: "Titanic" })
+        }
     }
     function updateUser(user) { }
     return (

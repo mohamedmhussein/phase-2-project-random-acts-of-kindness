@@ -18,7 +18,8 @@ function MyKindness({ currentUser }) {
 
     // extracting the data from the fetching
     function extractUserData(data) {
-        setMyPostsArray(data[0][`${currentUser}`])
+
+        data[0][`${currentUser}`] ? setMyPostsArray(data[0][`${currentUser}`]) : setMyPostsArray([])
 
     }
 

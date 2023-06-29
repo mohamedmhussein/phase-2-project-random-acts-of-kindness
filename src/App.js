@@ -35,7 +35,7 @@ function App() {
           <MyKindness currentUser={currentUser} />
         </Route>
         <Route exact path="/NewKindness">
-          <NewPost />
+          <NewPost user={currentUser} />
         </Route>
       </Switch>
     </div>
