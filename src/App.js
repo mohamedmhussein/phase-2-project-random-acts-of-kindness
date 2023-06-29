@@ -26,10 +26,10 @@ function App() {
         <Route exact path="/">
           <OthersPosts currentUser={currentUser} />
         </Route>
-        <Route exact path="/users/MyKindness">
+        <Route exact path="/MyKindness">
           <MyKindness currentUser={currentUser} />
         </Route>
-        <Route exact path="/users/NewKindness">
+        <Route exact path="/NewKindness">
           <NewPost />
         </Route>
       </Switch>

@@ -14,6 +14,14 @@ function NewPost() {
             </div>
             <div className="columns">
                 <div className="field column is-offset-one-quarter is-half">
+                    <label className="label">Username</label>
+                    <div className="control">
+                        <input className="input" type="text" placeholder="Type your username" style={{ borderRadius: "1.5em" }} />
+                    </div>
+                </div>
+            </div>
+            <div className="columns">
+                <div className="field column is-offset-one-quarter is-half">
                     <label className="label">My new act of kindness :)</label>
                     <div className="control">
                         <textarea className="textarea" rows="10" placeholder="Spread your kindness to the world!" style={{ borderRadius: "1.5em" }} />
