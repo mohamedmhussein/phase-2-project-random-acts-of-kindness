@@ -14,13 +14,23 @@ function NewPost() {
     }
 
     function handleSubmit(e) {
-
+        e.preventDefault()
         // 1 - Get Data from json File
         // 2- check if username exists
-        //     - if true? post under the existing userEvent
+        //     - if true? update under the existing user
         //     - if false? post a new user
+        fetch("http://localhost:3000/users")
+            .then(r => r.json())
+            .then(data => {
+                const usersList = Object.keys(data[0])
+                usersList.includes(formData.username) ? addNewUser(formData.username) : updateUser(formData.username)
+            })
 
     }
+    function addNewUser(user) {
+        
+    }
+    function updateUser(user) { }
     return (
 
         <form onSubmit={handleSubmit}>
