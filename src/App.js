@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import NewPost from "./NewPost";
 import OthersPosts from "./OthersPosts";
 import MyKindness from "./MyKindness";
+import SetUser from "./SetUser";
 function App() {
   const backgroundStyle = {
     backgroundImage: `url("/assets/background2.jpg")`,
@@ -19,9 +20,13 @@ function App() {
   //style={backgroundStyle}
 
   const [currentUser, setCurrentUser] = useState("user1")
+  function setUser(user) {
+    setCurrentUser(user)
+  }
   return (
     <div style={backgroundStyle2} >
       <Navbar />
+      <SetUser setCurrentUser={setUser} />
       <Switch>
         <Route exact path="/">
           <OthersPosts currentUser={currentUser} />
