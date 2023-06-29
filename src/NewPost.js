@@ -1,8 +1,7 @@
-import userEvent from "@testing-library/user-event"
 import { useState } from "react"
 function NewPost(user) {
 
-    const [formData, setFormData] = useState({ username: "", title: "", act: "" })
+    const [formData, setFormData] = useState({ username: user, title: "", act: "" })
 
     function handleChange(e) {
         setFormData({
@@ -44,14 +43,6 @@ function NewPost(user) {
                     <label className="label">Title</label>
                     <div className="control">
                         <input className="input" type="text" placeholder="Give a title to your kindness" style={{ borderRadius: "1.5em" }} onChange={handleChange} name="title" />
-                    </div>
-                </div>
-            </div>
-            <div className="columns">
-                <div className="field column is-offset-one-quarter is-half">
-                    <label className="label">Username</label>
-                    <div className="control">
-                        <input className="input" type="text" placeholder="Type your username" style={{ borderRadius: "1.5em" }} onChange={handleChange} name="username" />
                     </div>
                 </div>
             </div>
