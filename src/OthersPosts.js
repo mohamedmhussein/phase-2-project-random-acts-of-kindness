@@ -26,7 +26,7 @@ function OthersPosts({ currentUser }) {
     }
 
     return (
-        <div>
+        <div className="column is-offset-2 is-8">
             {posts}
         </div>
     )

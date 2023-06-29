@@ -26,7 +26,7 @@ function MyKindness({ currentUser }) {
     const postList = myPostsArray.map(kindness => <Post key={kindness.id} act={kindness.act} title={kindness.title} user={currentUser} />)
 
     return (
-        <div className="column is-offset-3 is-6">
+        <div className="column is-offset-2 is-8">
             {postList}
         </div>
     )

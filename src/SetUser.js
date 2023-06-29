@@ -15,9 +15,8 @@ function SetUser({ setCurrentUser }) {
         setIsActive(!isActive)
     }
 
-    // className={ active? "is-active" : ""}
     return (
-        <div className={isActive ? "modal is-active" : "modal"} style={{ backgroundColor: "#ffb6f0" }}>
+        <div className={`modal ${isActive ? "modal is-active" : "modal"}`} style={{ backgroundColor: "#ffb6f0" }}>
             <div className="modal-background has-background-danger"></div>
             <div className="modal-content has-background-white px-5 py-6" style={{ borderRadius: "2em" }}>
                 <h4 className="title my-2">Welcome to Random Acts of Kindness</h4>
