@@ -24,10 +24,10 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/users">
-          <OthersPosts user={currentUser} />
+          <OthersPosts currentUser={currentUser} />
         </Route>
         <Route exact path="/users/MyKindness">
-          <MyKindness user={currentUser} />
+          <MyKindness currentUser={currentUser} />
         </Route>
         <Route exact path="/users/NewKindness">
           <NewPost />

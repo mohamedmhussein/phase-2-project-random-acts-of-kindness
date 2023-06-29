@@ -1,29 +1,34 @@
 import Post from "./Post"
 import { useState, useEffect } from "react"
-function OthersPosts({ user }) {
+function OthersPosts({ currentUser }) {
 
-    // useEffect(() => {
-    //     fetch("http://localhost:3000")
-    //         .then(res => res.json())
-    //         .then(users => {
-    //             console.log(users)
-    //         })
-    // }, [])
+    //Fetching the all posts for all users
+    useEffect(() => {
+        fetch("http://localhost:3000/users")
+            .then(res => res.json())
+            .then(data => {
+                showOtherPosts(data)
+            })
+    }, [currentUser])
+    //creating a state variable for posts to extract it from insie the function showOtherPosts
+    const [posts, setPosts] = useState([])
+
+    //Forming the posts for users excluding the currentUser
+    function showOtherPosts(data) {
+        //Forming an array of usernames
+        const users = Object.keys(data[0])
+        //Excluding the current user from the list of users
+        const otherUsers = users.filter(user => user !== currentUser)
+        //Forming posts of all users excluding the current one (nested .map)
+        const theOtherPosts = otherUsers.map(user => data[0][user].map(username => <Post key={username.id} act={username.act} title={username.title} />))
+        //Updating the state variabl 
+        setPosts(theOtherPosts)
+    }
 
     return (
-        <div className="columns is-multiline">
-            <div className="column is-half">
-                <Post act="It was a cold winter evening when a young woman named Sarah was driving home from work. Suddenly, her car started sputtering and came to a halt on a deserted road. Feeling helpless, she frantically searched for her phone, but realized she had left it at the office. Just as despair was starting to set in, I pulled over to offer assistance. I had noticed Sarah's predicament and immediately offered to call a tow truck and stay with her until help arrived. My act of kindness not only provided practical assistance, but also comforted Sarah during a vulnerable and stressful situation." title="Helping Emily" />
-            </div>
-            <div className="column is-half">
-                <Post act="It was a cold winter evening when a young woman named Sarah was driving home from work. Suddenly, her car started sputtering and came to a halt on a deserted road. Feeling helpless, she frantically searched for her phone, but realized she had left it at the office. Just as despair was starting to set in, I pulled over to offer assistance. I had noticed Sarah's predicament and immediately offered to call a tow truck and stay with her until help arrived. My act of kindness not only provided practical assistance, but also comforted Sarah during a vulnerable and stressful situation.It was a cold winter evening when a young woman named Sarah was driving home from work. Suddenly, her car started sputtering and came to a halt on a deserted road. Feeling helpless, she frantically searched for her phone, but realized she had left it at the office. Just as despair was starting to set in, I pulled over to offer assistance. I had noticed Sarah's predicament and immediately offered to call a tow truck and stay with her until help arrived. My act of kindness not only provided practical assistance, but also comforted Sarah during a vulnerable and stressful situation." title="Helping Emily" />
-            </div>
-            <div className="column is-half">
-                <Post act="It was a cold winter evening when a young woman named Sarah was driving home from work. Suddenly, her car started sputtering and came to a halt on a deserted road. Feeling helpless, she frantically searched for her phone, but realized she had left it at the office. Just as despair was starting to set in, I pulled over to offer assistance. I had noticed Sarah's predicament and immediately offered to call a tow truck and stay with her until help arrived. My act of kindness not only provided practical assistance, but also comforted Sarah during a vulnerable and stressful situation." title="Helping Emily" />
-            </div>
-
+        <div>
+            {posts}
         </div>
-
     )
 }
 

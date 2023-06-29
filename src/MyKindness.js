@@ -1,7 +1,7 @@
 import Post from "./Post";
 import { useEffect, useState } from "react";
 
-function MyKindness({ user }) {
+function MyKindness({ currentUser }) {
 
     // using a state of an Array of my kindness acts
     const [myPostsArray, setMyPostsArray] = useState([])
@@ -14,11 +14,12 @@ function MyKindness({ user }) {
                 //console.log(userData)
                 extractUserData(userData)
             })
-    }, [user])
+    }, [currentUser])
 
     // extracting the data from the fetching
     function extractUserData(data) {
-        setMyPostsArray(data[0][`${user}`])
+        setMyPostsArray(data[0][`${currentUser}`])
+
     }
 
     //construct the JSX of each post using mapping
