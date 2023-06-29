@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 function Navbar() {
     const navItemClasses = "navbar-item has-text-weight-semibold is-tab has-text-grey-dark"
+
     return (
         <nav className="navbar is-info has-text-grey-dark has-background-danger-light">
             <div className="navbar-brand ">
