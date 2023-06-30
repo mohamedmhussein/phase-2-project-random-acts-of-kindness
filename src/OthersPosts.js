@@ -15,12 +15,10 @@ function OthersPosts({ currentUser }) {
 
     //Forming the posts for users excluding the currentUser
     function showOtherPosts(data) {
-        //Forming an array of usernames
-        const users = Object.keys(data[0])
-        //Excluding the current user from the list of users
-        const otherUsers = users.filter(user => user !== currentUser)
-        //Forming posts of all users excluding the current one (nested .map)
-        const theOtherPosts = otherUsers.map(user => data[0][user].map(username => <Post key={username.id} act={username.act} title={username.title} user={user} />))
+        //Filtering for posts of users excluding the currentUser
+        const otherUsers = data.filter(item => item.user !== currentUser)
+        //Forming posts of all users excluding the current one ( .map)
+        const theOtherPosts = otherUsers.map(user => <Post key={user.id} act={user.act} title={user.title} user={user.user} />)
         //Updating the state variabl 
         setPosts(theOtherPosts)
     }

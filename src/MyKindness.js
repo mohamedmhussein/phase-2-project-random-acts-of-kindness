@@ -16,7 +16,9 @@ function MyKindness({ currentUser }) {
 
     // extracting the data from the fetching
     function extractUserData(data) {
-         data[0][`${currentUser}`] ? setMyPostsArray(data[0][`${currentUser}`]) : setMyPostsArray([])
+        setMyPostsArray(data.filter(item => item.user === currentUser))
+
+        // data[0][`${currentUser}`] ? setMyPostsArray(data[0][`${currentUser}`]) : setMyPostsArray([])
     }
     //construct the JSX of each post using mapping
     const postList = myPostsArray.map(kindness => <Post key={kindness.id} act={kindness.act} title={kindness.title} user={currentUser} />)
