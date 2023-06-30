@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function NewPost({ user }) {
+function NewPost({ user, dataChange, setDataChange }) {
     const [formData, setFormData] = useState({ user: user, title: "", act: "", like: 0, IDidIt: 0, IWillDoIt: 0 })
     const [data, setData] = useState("")
     function handleChange(e) {
@@ -13,7 +13,7 @@ function NewPost({ user }) {
 
     function handleSubmit(e) {
         e.preventDefault()
-        document.getElementById("form").reset();
+
 
         const configObj = {
             method: "POST",
@@ -25,7 +25,9 @@ function NewPost({ user }) {
 
         fetch("http://localhost:3000/users/", configObj)
             .then(r => r.json())
-            .then(data => console.log(data))
+            .then(data => setDataChange(!dataChange))
+
+        document.getElementById("form").reset();
 
     }
 

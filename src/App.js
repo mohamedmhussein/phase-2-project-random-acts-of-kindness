@@ -1,5 +1,5 @@
 import { Route, Switch } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import NewPost from "./NewPost";
 import OthersPosts from "./OthersPosts";
@@ -19,12 +19,17 @@ function App() {
   // const colors = ["#f43333", "#ff98b8", "#ffb6f0", "#ff7cc0", "#ff8789"]
   //style={backgroundStyle}
 
+  // dataChange variable to trigger the useEffect fetching when data is updated
+  const [dataChange, setDataChange] = useState(false)
+  //A variable for the current user of the app
   const [currentUser, setCurrentUser] = useState("user1")
+  // a state variable for the interactions (button clicks) on posts
   const [interactions, setInteractions] = useState({ like: 0, IDidIt: 0, IWillDoIt: 0 })
+
+  //Set the current user
   function setUser(user) {
     setCurrentUser(user)
   }
-  //console.log(interactions.like)
 
   function handleClick(e, id) {
     const interaction = e.target.name
@@ -32,12 +37,7 @@ function App() {
       ...interactions,
       [e.target.name]: interactions[interaction] += 1
     })
-    // console.log(interactions)
-    // const patchedObj = {
-    //   ...postProperties,
-    //   ...interactions
-    // }
-    //console.log(patchedObj)
+
     const configObj = {
       method: "PATCH",
       headers: {
@@ -47,7 +47,7 @@ function App() {
     }
 
     fetch(`http://localhost:3000/users/${id}`, configObj)
-      .then(r => r.json()).then(data => console.log(data))
+      .then(r => r.json()).then(data => setDataChange(!dataChange))
   }
 
 
@@ -57,13 +57,13 @@ function App() {
       <SetUser setCurrentUser={setUser} />
       <Switch>
         <Route exact path="/">
-          <OthersPosts currentUser={currentUser} handleClick={handleClick} />
+          <OthersPosts currentUser={currentUser} handleClick={handleClick} dataChange={dataChange} />
         </Route>
         <Route exact path="/MyKindness">
-          <MyKindness currentUser={currentUser} handleClick={handleClick} />
+          <MyKindness currentUser={currentUser} handleClick={handleClick} dataChange={dataChange} />
         </Route>
         <Route exact path="/NewKindness">
-          <NewPost user={currentUser} />
+          <NewPost user={currentUser} dataChange={dataChange} setDataChange={setDataChange} />
         </Route>
       </Switch>
     </div>

@@ -1,6 +1,6 @@
 import Post from "./Post"
 import { useState, useEffect } from "react"
-function OthersPosts({ currentUser, handleClick }) {
+function OthersPosts({ currentUser, handleClick, dataChange }) {
 
     //Fetching the all posts for all users
     useEffect(() => {
@@ -9,7 +9,7 @@ function OthersPosts({ currentUser, handleClick }) {
             .then(data => {
                 showOtherPosts(data)
             })
-    }, [currentUser])
+    }, [dataChange])
     //creating a state variable for posts to extract it from insie the function showOtherPosts
     const [posts, setPosts] = useState([])
 
