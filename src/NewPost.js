@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 function NewPost({ user }) {
-    const [formData, setFormData] = useState({ username: user, title: "", act: "" })
+    const [formData, setFormData] = useState({ user: user, title: "", act: "", like: 0, IDidIt: 0, IWillDoIt: 0 })
     const [data, setData] = useState("")
     function handleChange(e) {
         setFormData({
@@ -14,59 +14,22 @@ function NewPost({ user }) {
     function handleSubmit(e) {
         e.preventDefault()
         document.getElementById("form").reset();
-        // 1 - Get Data from the server
-        // 2- check if username exists
-        //     - if true? update under the existing user
-        //     - if false? post a new user
-        fetch("http://localhost:3000/users/")
-            .then(r => r.json())
-            .then(data => {
-                console.log(data)
-                const usersList = Object.keys(data)
-                usersList.includes(user) ? addNewUser(user) : updateUser(user)
-            })
 
-    }
-
-    function updateUser(user) {
         const configObj = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-                [user]: [
-                    {
-                        title: formData.title,
-                        act: formData.act
-                    }]
-            }),
+            body: JSON.stringify(formData)
         }
 
-        // fetch(`http://localhost:3000/users/${user}`, configObj)
-        //     .then(r => r.json())
-        //     .then(data => console.log(data))
+        fetch("http://localhost:3000/users/", configObj)
+            .then(r => r.json())
+            .then(data => console.log(data))
+
     }
 
-    function addNewUser(username) {
-        const configObj = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                [username]: [
-                    {
-                        title: formData.title,
-                        act: formData.act
-                    }]
-            })
 
-
-        }
-
-        // fetch('http://localhost:3000/', configObj)
-        //     .then(res => res.json())
-        //     .then(data => addData(data)) //THIS STATE UPDATE IS REQUIRED!!!
-    }
 
     return (
 
