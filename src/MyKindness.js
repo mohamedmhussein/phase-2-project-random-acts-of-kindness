@@ -1,7 +1,7 @@
 import Post from "./Post";
 import { useEffect, useState } from "react";
 
-function MyKindness({ currentUser }) {
+function MyKindness({ currentUser, handleClick }) {
 
     // using a state of an Array of my kindness acts
     const [myPostsArray, setMyPostsArray] = useState([])
@@ -21,7 +21,7 @@ function MyKindness({ currentUser }) {
         // data[0][`${currentUser}`] ? setMyPostsArray(data[0][`${currentUser}`]) : setMyPostsArray([])
     }
     //construct the JSX of each post using mapping
-    const postList = myPostsArray.map(user => <Post key={user.id} act={user.act} title={user.title} user={user.user} like={user.like} IDidIt={user.IDidIt} IWillDoIt={user.IWillDoIt} id={user.id}/>)
+    const postList = myPostsArray.map(user => <Post key={user.id} act={user.act} title={user.title} user={user.user} like={user.like} IDidIt={user.IDidIt} IWillDoIt={user.IWillDoIt} id={user.id} handleClick={handleClick}/>)
 
     return (
         <div className="column is-offset-2 is-8">

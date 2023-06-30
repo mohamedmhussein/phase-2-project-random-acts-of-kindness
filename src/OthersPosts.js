@@ -1,6 +1,6 @@
 import Post from "./Post"
 import { useState, useEffect } from "react"
-function OthersPosts({ currentUser }) {
+function OthersPosts({ currentUser, handleClick }) {
 
     //Fetching the all posts for all users
     useEffect(() => {
@@ -18,7 +18,7 @@ function OthersPosts({ currentUser }) {
         //Filtering for posts of users excluding the currentUser
         const otherUsers = data.filter(item => item.user !== currentUser)
         //Forming posts of all users excluding the current one ( .map)
-        const theOtherPosts = otherUsers.map(user => <Post key={user.id} act={user.act} title={user.title} user={user.user} like={user.like} IDidIt={user.IDidIt} IWillDoIt={user.IWillDoIt} id={user.id} />)
+        const theOtherPosts = otherUsers.map(user => <Post key={user.id} act={user.act} title={user.title} user={user.user} like={user.like} IDidIt={user.IDidIt} IWillDoIt={user.IWillDoIt} id={user.id} handleClick={handleClick} />)
         //Updating the state variabl 
         setPosts(theOtherPosts)
     }

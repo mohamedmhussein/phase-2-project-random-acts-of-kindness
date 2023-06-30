@@ -1,6 +1,5 @@
 import "./Post.css"
-import { useState } from "react"
-function Post({ act, title, user, like, IDidIt, IWillDoIt, id }) {
+function Post({ act, title, user, like, IDidIt, IWillDoIt, id, handleClick }) {
     const buttonClasses = "button is-warning has-text-weight-semibold is-rounded"
 
     //const [likes, setLikes] = useState([like: 0, IDidIt: 0, IWillDoIt: 0])
@@ -17,16 +16,16 @@ function Post({ act, title, user, like, IDidIt, IWillDoIt, id }) {
                 <div className="field is-grouped mx-5 columns mb-1">
                     <p className="control column has-text-centered">
                         <button className={buttonClasses}>
-                            <i className="fa-solid fa-heart mr-2 has-text-danger"></i> Like {like}
+                            <i className="fa-solid fa-heart mr-2 has-text-danger" name="like" onClick={e =>  handleClick(e)}></i> Like {like}
                         </button>
                     </p>
                     <p className="control column has-text-centered">
                         <button className={buttonClasses}>
-                            <i className="fa-solid fa-circle-check mr-2 has-text-success"></i>I did it! {IDidIt}
+                            <i className="fa-solid fa-circle-check mr-2 has-text-success" name="IDidIt" onClick={e =>  handleClick(e)}></i>I did it! {IDidIt}
                         </button>
                     </p>
                     <p className="control column has-text-centered">
-                        <button className={buttonClasses}>
+                        <button className={buttonClasses} name="IDidIt" onClick={e =>  handleClick(e)}>
                             💪 I will do it! {IWillDoIt}
                         </button>
                     </p>

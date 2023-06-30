@@ -20,8 +20,13 @@ function App() {
   //style={backgroundStyle}
 
   const [currentUser, setCurrentUser] = useState("user1")
+  const [interactions, setInteractions] = useState({ like: 0, IDidIt: 0, IWillDoIt: 0 })
   function setUser(user) {
     setCurrentUser(user)
+  }
+
+  function handleClick(e) {
+    console.log(e.target.name)
   }
   return (
     <div style={backgroundStyle2} >
@@ -29,10 +34,10 @@ function App() {
       <SetUser setCurrentUser={setUser} />
       <Switch>
         <Route exact path="/">
-          <OthersPosts currentUser={currentUser} />
+          <OthersPosts currentUser={currentUser} handleClick={handleClick} />
         </Route>
         <Route exact path="/MyKindness">
-          <MyKindness currentUser={currentUser} />
+          <MyKindness currentUser={currentUser} handleClick={handleClick} />
         </Route>
         <Route exact path="/NewKindness">
           <NewPost user={currentUser} />
