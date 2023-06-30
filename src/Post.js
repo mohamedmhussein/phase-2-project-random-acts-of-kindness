@@ -15,17 +15,17 @@ function Post({ act, title, user, like, IDidIt, IWillDoIt, id, handleClick }) {
                 </p>
                 <div className="field is-grouped mx-5 columns mb-1">
                     <p className="control column has-text-centered">
-                        <button className={buttonClasses}>
-                            <i className="fa-solid fa-heart mr-2 has-text-danger" name="like" onClick={e =>  handleClick(e)}></i> Like {like}
+                        <button className={buttonClasses} name="like" onClick={e => handleClick(e)}>
+                            <i className="fa-solid fa-heart mr-2 has-text-danger"  ></i> Like {like}
                         </button>
                     </p>
                     <p className="control column has-text-centered">
-                        <button className={buttonClasses}>
-                            <i className="fa-solid fa-circle-check mr-2 has-text-success" name="IDidIt" onClick={e =>  handleClick(e)}></i>I did it! {IDidIt}
+                        <button className={buttonClasses} name="IDidIt" onClick={e => handleClick(e)}>
+                            <i className="fa-solid fa-circle-check mr-2 has-text-success" ></i>I did it! {IDidIt}
                         </button>
                     </p>
                     <p className="control column has-text-centered">
-                        <button className={buttonClasses} name="IDidIt" onClick={e =>  handleClick(e)}>
+                        <button className={buttonClasses} name="IWillDoIt" onClick={e => handleClick(e)}>
                             💪 I will do it! {IWillDoIt}
                         </button>
                     </p>
