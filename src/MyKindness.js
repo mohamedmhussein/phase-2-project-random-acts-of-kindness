@@ -21,7 +21,7 @@ function MyKindness({ currentUser }) {
         // data[0][`${currentUser}`] ? setMyPostsArray(data[0][`${currentUser}`]) : setMyPostsArray([])
     }
     //construct the JSX of each post using mapping
-    const postList = myPostsArray.map(kindness => <Post key={kindness.id} act={kindness.act} title={kindness.title} user={currentUser} />)
+    const postList = myPostsArray.map(user => <Post key={user.id} act={user.act} title={user.title} user={user.user} like={user.like} IDidIt={user.IDidIt} IWillDoIt={user.IWillDoIt} />)
 
     return (
         <div className="column is-offset-2 is-8">
