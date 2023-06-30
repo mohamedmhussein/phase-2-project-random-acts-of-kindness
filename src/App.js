@@ -26,24 +26,24 @@ function App() {
   }
   //console.log(interactions.like)
 
-  function handleClick(e, id, postProperties) {
+  function handleClick(e, id) {
     const interaction = e.target.name
     setInteractions({
       ...interactions,
       [e.target.name]: interactions[interaction] += 1
     })
     // console.log(interactions)
-    const patchedObj = {
-      ...postProperties,
-      ...interactions
-    }
-    console.log(patchedObj)
+    // const patchedObj = {
+    //   ...postProperties,
+    //   ...interactions
+    // }
+    //console.log(patchedObj)
     const configObj = {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(patchedObj)
+      body: JSON.stringify(interactions)
     }
 
     fetch(`http://localhost:3000/users/${id}`, configObj)
