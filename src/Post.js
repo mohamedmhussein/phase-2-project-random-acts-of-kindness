@@ -1,6 +1,6 @@
 import "./Post.css"
 import { useState } from "react"
-function Post({ act, title, user, like, IDidIt, IWillDoIt }) {
+function Post({ act, title, user, like, IDidIt, IWillDoIt, id }) {
     const buttonClasses = "button is-warning has-text-weight-semibold is-rounded"
 
     //const [likes, setLikes] = useState([like: 0, IDidIt: 0, IWillDoIt: 0])
