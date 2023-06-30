@@ -1,19 +1,19 @@
 import { useState } from "react"
-function NewPost(user) {
 
+function NewPost({ user }) {
     const [formData, setFormData] = useState({ username: user, title: "", act: "" })
-
+    const [data, setData] = useState("")
     function handleChange(e) {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
         })
-
         //console.log(formData)
     }
 
     function handleSubmit(e) {
         e.preventDefault()
+        document.getElementById("form").reset();
         // 1 - Get Data from json File
         // 2- check if username exists
         //     - if true? update under the existing user
@@ -21,22 +21,39 @@ function NewPost(user) {
         fetch("http://localhost:3000/users")
             .then(r => r.json())
             .then(data => {
-                const usersList = Object.keys(data[0])
+                console.log(data)
+                const usersList = Object.keys(data)
                 usersList.includes(user) ? addNewUser(user) : updateUser(user)
             })
 
     }
-    function addNewUser(user) {
+    function addNewUser(username) {
         const configObj = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ title: "Titanic" })
+            body: JSON.stringify({
+                [username]: [
+                    {
+                        title: formData.title,
+                        act: formData.act
+                    }]
+            })
+
+
         }
+
+        // fetch('http://localhost:3000/', configObj)
+        //     .then(res => res.json())
+        //     .then(data => addData(data)) //THIS STATE UPDATE IS REQUIRED!!!
     }
+    // function addData(userdata) {
+    //     setData(userdata)
+    //     console.log(data)
+    // }
     function updateUser(user) { }
     return (
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} id="form">
             <h1 className="has-text-centered is-size-3 my-4 has-text-weight-bold has-text">New Kindness</h1>
             <div className="columns">
                 <div className="field column is-offset-one-quarter is-half">

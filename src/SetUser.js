@@ -3,12 +3,9 @@ function SetUser({ setCurrentUser }) {
 
     const [username, setUsername] = useState("")
     const [isActive, setIsActive] = useState(true)
-    const mainClasses = "modal is-active"
-
     function handleChange(e) {
         setUsername(e.target.value)
     }
-
     function handleSubmit(e) {
         e.preventDefault()
         setCurrentUser(username)
