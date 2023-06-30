@@ -24,10 +24,33 @@ function App() {
   function setUser(user) {
     setCurrentUser(user)
   }
+  //console.log(interactions.like)
 
-  function handleClick(e) {
-    console.log(e.target.name)
+  function handleClick(e, id, postProperties) {
+    const interaction = e.target.name
+    setInteractions({
+      ...interactions,
+      [e.target.name]: interactions[interaction] += 1
+    })
+    // console.log(interactions)
+    const patchedObj = {
+      ...postProperties,
+      ...interactions
+    }
+    console.log(patchedObj)
+    const configObj = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(patchedObj)
+    }
+
+    fetch(`http://localhost:3000/users/${id}`, configObj)
+      .then(r => r.json()).then(data => console.log(data))
   }
+
+
   return (
     <div style={backgroundStyle2} >
       <Navbar />
