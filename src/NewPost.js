@@ -2,7 +2,6 @@ import { useState } from "react"
 
 function NewPost({ user, dataChange, setDataChange }) {
 
-
     const [formData, setFormData] = useState({ user: user, title: "", act: "", like: 0, IDidIt: 0, IWillDoIt: 0 })
 
     //Updating the form Data based on the user input
@@ -30,11 +29,7 @@ function NewPost({ user, dataChange, setDataChange }) {
 
         //resetting the form
         document.getElementById("form").reset();
-
     }
-
-
-
     return (
 
         <form onSubmit={handleSubmit} id="form" style={{ height: "100vh" }}>
@@ -66,7 +61,6 @@ function NewPost({ user, dataChange, setDataChange }) {
             </div>
 
         </form>
-
     )
 }
 

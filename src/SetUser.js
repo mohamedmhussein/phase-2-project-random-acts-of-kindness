@@ -3,9 +3,11 @@ function SetUser({ setCurrentUser }) {
 
     const [username, setUsername] = useState("")
     const [isActive, setIsActive] = useState(true)
+
     function handleChange(e) {
         setUsername(e.target.value)
     }
+
     function handleSubmit(e) {
         e.preventDefault()
         setCurrentUser(username)
@@ -17,8 +19,6 @@ function SetUser({ setCurrentUser }) {
             <div className="modal-background has-background-danger"></div>
             <div className="modal-content has-background-white px-5 py-6" style={{ borderRadius: "2em" }}>
                 <h4 className="title my-2">Welcome to Random Acts of Kindness</h4>
-
-
                 <form onSubmit={handleSubmit}>
                     <div className="field">
                         <label className="label">Username</label>
@@ -27,7 +27,6 @@ function SetUser({ setCurrentUser }) {
                         </div>
                     </div>
                     <div className="has-text-centered mt-5"><button className="button is-rounded is-danger" type="submit">Submit</button></div>
-
                 </form>
             </div>
         </div>

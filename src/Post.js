@@ -1,7 +1,6 @@
 function Post({ act, title, user, like, IDidIt, IWillDoIt, id, handleClick }) {
     const buttonClasses = "button is-warning has-text-weight-semibold is-rounded"
-
-
+    
     return (
         <div className="columns my-6 ">
             <div className="box column mx-6 content is-normal " style={{ opacity: "195%" }}>

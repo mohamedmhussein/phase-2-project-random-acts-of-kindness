@@ -43,7 +43,6 @@ function App() {
       .then(r => r.json()).then(data => setDataChange(!dataChange))
   }
 
-
   return (
     <div style={backgroundStyle} >
       <Navbar />
