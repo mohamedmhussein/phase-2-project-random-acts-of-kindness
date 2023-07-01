@@ -27,6 +27,8 @@ function OthersPosts({ currentUser, handleClick, dataChange }) {
 
     return (
         <div className="column is-offset-2 is-8">
+            <h1 className="is-size-2 has-text-weight-bold has-text-centered mt-4">Welcome to Random Acts of Kindness</h1>
+            <h1 className="subtitle has-text-centered my-1">This is a place where we share our kindness to the world to inspire as many people as we can to spead kindness to others. Get inspired by the below acts of kindness and share yours.</h1>
             {posts}
         </div>
     )
