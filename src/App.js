@@ -1,57 +1,51 @@
 import { Route, Switch } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navbar from "./Navbar";
 import NewPost from "./NewPost";
 import OthersPosts from "./OthersPosts";
 import MyKindness from "./MyKindness";
 import SetUser from "./SetUser";
 function App() {
-  const backgroundStyle = {
+  const backgroundStyle2 = {
     backgroundImage: `url("/assets/background2.jpg")`,
-    height: "1000px",
+    height: "100%",
     backgroundSize: "cover"
   }
 
-  const backgroundStyle2 = {
+  const backgroundStyle = {
     backgroundColor: "#ffb6f0",
 
   }
-  // const colors = ["#f43333", "#ff98b8", "#ffb6f0", "#ff7cc0", "#ff8789"]
-  //style={backgroundStyle}
 
   // dataChange variable to trigger the useEffect fetching when data is updated
   const [dataChange, setDataChange] = useState(false)
   //A variable for the current user of the app
   const [currentUser, setCurrentUser] = useState("user1")
-  // a state variable for the interactions (button clicks) on posts
-  const [interactions, setInteractions] = useState({ like: 0, IDidIt: 0, IWillDoIt: 0 })
+
   //Set the current user
   function setUser(user) {
     setCurrentUser(user)
   }
 
+  //Triggering the click event for all buttons, all posts
   function handleClick(e, id) {
-    const interaction = e.target.name
-    setInteractions({
-      ...interactions,
-      [e.target.name]: interactions[interaction] += 1
-    })
-
+    //Patch object
     const configObj = {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(interactions)
+      body: JSON.stringify({ [e.target.name]: Number(e.target.value) + 1 })
     }
 
+    //Patch request updating the button count
     fetch(`http://localhost:3000/users/${id}`, configObj)
       .then(r => r.json()).then(data => setDataChange(!dataChange))
   }
 
 
   return (
-    <div style={backgroundStyle2} >
+    <div style={backgroundStyle} >
       <Navbar />
       <SetUser setCurrentUser={setUser} />
       <Switch>
