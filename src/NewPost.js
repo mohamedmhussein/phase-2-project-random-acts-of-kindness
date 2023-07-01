@@ -37,7 +37,7 @@ function NewPost({ user, dataChange, setDataChange }) {
 
     return (
 
-        <form onSubmit={handleSubmit} id="form">
+        <form onSubmit={handleSubmit} id="form" style={{ height: "100vh" }}>
             <h1 className="has-text-centered is-size-3 my-4 has-text-weight-bold has-text">New Kindness</h1>
             <div className="columns">
                 <div className="field column is-offset-one-quarter is-half">
