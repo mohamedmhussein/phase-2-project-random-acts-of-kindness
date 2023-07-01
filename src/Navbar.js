@@ -9,7 +9,7 @@ function Navbar() {
         <nav className="navbar is-info has-text-grey-dark has-background-danger-light">
             <div className="navbar-brand ">
                 <a className="navbar-item" href="#" >
-                    <img src="/assets/logo-trans.png" style={{ maxHeight: "4.5vh" }} />
+                    <img src="/assets/logo-trans.png" style={{ maxHeight: "2.3em" }} />
                 </a>
             </div>
             <div className="navbar-menu navbar-end mr-3 ">
