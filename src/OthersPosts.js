@@ -2,7 +2,7 @@ import Post from "./Post"
 import { useState, useEffect } from "react"
 function OthersPosts({ currentUser, handleClick, dataChange }) {
     // This component has the posts by all other users excluding the current one
-    
+
     //Fetching the all posts for all users
     useEffect(() => {
         fetch("http://localhost:3000/users")
@@ -11,7 +11,7 @@ function OthersPosts({ currentUser, handleClick, dataChange }) {
                 showOtherPosts(data)
             })
     }, [dataChange, currentUser])
-    
+
     //creating a state variable for posts to extract it from insie the function showOtherPosts
     const [posts, setPosts] = useState([])
 

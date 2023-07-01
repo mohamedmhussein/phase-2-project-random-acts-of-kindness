@@ -13,9 +13,9 @@ function Navbar() {
                 </a>
             </div>
             <div className="navbar-menu navbar-end mr-3 ">
-                <Link to="/" exact="true" ><a className={navItemClasses}>Home</a></Link>
-                <Link to="/MyKindness" exact="true" ><a className={navItemClasses}>My Kindness</a></Link>
-                <Link to="/NewKindness" exact="true" ><a className={navItemClasses}>New Kindness</a></Link>
+                <Link to="/" exact="true" ><i className={navItemClasses}>Home</i></Link>
+                <Link to="/MyKindness" exact="true" ><i className={navItemClasses}>My Kindness</i></Link>
+                <Link to="/NewKindness" exact="true" ><i className={navItemClasses}>New Kindness</i></Link>
             </div>
         </nav>
     )
