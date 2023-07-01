@@ -5,17 +5,17 @@
       "id": 1,
       "title": "Cold Winter",
       "like": 1,
-      "IDidIt": 0,
-      "IWillDoIt": 0,
+      "IDidIt": 1,
+      "IWillDoIt": 1,
       "act": "It was a cold winter evening when a young woman named Sarah was driving home from work. Suddenly, her car started sputtering and came to a halt on a deserted road. Feeling helpless, she frantically searched for her phone, but realized she had left it at the office. Just as despair was starting to set in, I pulled over to offer assistance. I had noticed Sarah's predicament and immediately offered to call a tow truck and stay with her until help arrived. My act of kindness not only provided practical assistance, but also comforted Sarah during a vulnerable and stressful situation."
     },
     {
       "user": "user1",
       "id": 2,
       "title": "Helping Emily",
-      "like": 17,
-      "IDidIt": 9,
-      "IWillDoIt": 18,
+      "like": 3,
+      "IDidIt": 3,
+      "IWillDoIt": 2,
       "act": "Emily had recently lost her mother after a long battle with illness. Overwhelmed with grief, she found it difficult to navigate her daily life. Recognizing Emily's struggle, I went above and beyond to provide support. I prepared meals for Emily, took care of household chores, and even researched local support groups for her to join. My consistent acts of kindness helped alleviate some of Emily's burdens, allowing her to focus on her healing process and reminding her that she was not alone in her grief.",
       "undefined": null
     },
@@ -23,19 +23,21 @@
       "user": "user1",
       "id": 3,
       "title": "Charity Act",
-      "like": 0,
-      "IDidIt": 0,
-      "IWillDoIt": 0,
-      "act": "During a devastating flood that affected an entire neighborhood, many families lost their homes and belongings. In response to the crisis, I organized a donation drive. I reached out to her community, urging them to contribute essential items such as clothing, food, and toiletries. My team and I collected the donations, sorted and packed them, and personally distributed them to the affected families. Such acts of kindness not only provided immediate relief, but also demonstrated the power of community support and unity during difficult times."
+      "like": 3,
+      "IDidIt": 3,
+      "IWillDoIt": 3,
+      "act": "During a devastating flood that affected an entire neighborhood, many families lost their homes and belongings. In response to the crisis, I organized a donation drive. I reached out to her community, urging them to contribute essential items such as clothing, food, and toiletries. My team and I collected the donations, sorted and packed them, and personally distributed them to the affected families. Such acts of kindness not only provided immediate relief, but also demonstrated the power of community support and unity during difficult times.",
+      "undefined": null
     },
     {
       "user": "user2",
       "id": 4,
       "title": "Cold Winter",
-      "like": 0,
-      "IDidIt": 1,
-      "IWillDoIt": 3,
-      "act": "It was a cold winter evening when a young woman named Sarah was driving home from work. Suddenly, her car started sputtering and came to a halt on a deserted road. Feeling helpless, she frantically searched for her phone, but realized she had left it at the office. Just as despair was starting to set in, I pulled over to offer assistance. I had noticed Sarah's predicament and immediately offered to call a tow truck and stay with her until help arrived. My act of kindness not only provided practical assistance, but also comforted Sarah during a vulnerable and stressful situation."
+      "like": 3,
+      "IDidIt": 4,
+      "IWillDoIt": 4,
+      "act": "It was a cold winter evening when a young woman named Sarah was driving home from work. Suddenly, her car started sputtering and came to a halt on a deserted road. Feeling helpless, she frantically searched for her phone, but realized she had left it at the office. Just as despair was starting to set in, I pulled over to offer assistance. I had noticed Sarah's predicament and immediately offered to call a tow truck and stay with her until help arrived. My act of kindness not only provided practical assistance, but also comforted Sarah during a vulnerable and stressful situation.",
+      "undefined": null
     },
     {
       "user": "user2",

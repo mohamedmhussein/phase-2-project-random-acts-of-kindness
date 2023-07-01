@@ -25,7 +25,6 @@ function App() {
   const [currentUser, setCurrentUser] = useState("user1")
   // a state variable for the interactions (button clicks) on posts
   const [interactions, setInteractions] = useState({ like: 0, IDidIt: 0, IWillDoIt: 0 })
-
   //Set the current user
   function setUser(user) {
     setCurrentUser(user)

@@ -11,7 +11,7 @@ function MyKindness({ currentUser, handleClick, dataChange }) {
             .then(data => {
                 extractUserData(data)
             })
-    }, [dataChange])
+    }, [dataChange, currentUser])
     // extracting the data from the fetching
 
 

@@ -9,7 +9,7 @@ function OthersPosts({ currentUser, handleClick, dataChange }) {
             .then(data => {
                 showOtherPosts(data)
             })
-    }, [dataChange])
+    }, [dataChange, currentUser])
     //creating a state variable for posts to extract it from insie the function showOtherPosts
     const [posts, setPosts] = useState([])
 
