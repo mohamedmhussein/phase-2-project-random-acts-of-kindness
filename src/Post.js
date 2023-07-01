@@ -1,4 +1,3 @@
-import "./Post.css"
 function Post({ act, title, user, like, IDidIt, IWillDoIt, id, handleClick }) {
     const buttonClasses = "button is-warning has-text-weight-semibold is-rounded"
 

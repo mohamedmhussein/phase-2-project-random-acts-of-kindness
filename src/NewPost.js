@@ -1,20 +1,21 @@
 import { useState } from "react"
 
 function NewPost({ user, dataChange, setDataChange }) {
+
+
     const [formData, setFormData] = useState({ user: user, title: "", act: "", like: 0, IDidIt: 0, IWillDoIt: 0 })
-    const [data, setData] = useState("")
+
+    //Updating the form Data based on the user input
     function handleChange(e) {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
         })
-        //console.log(formData)
     }
 
     function handleSubmit(e) {
         e.preventDefault()
-
-
+        // Post object
         const configObj = {
             method: "POST",
             headers: {
@@ -22,11 +23,12 @@ function NewPost({ user, dataChange, setDataChange }) {
             },
             body: JSON.stringify(formData)
         }
-
+        // Posting the user input to the server (notice triggering data change to re-rendering the linked components.)
         fetch("http://localhost:3000/users/", configObj)
             .then(r => r.json())
             .then(data => setDataChange(!dataChange))
 
+        //resetting the form
         document.getElementById("form").reset();
 
     }

@@ -1,6 +1,8 @@
 
 import { Link } from "react-router-dom";
 function Navbar() {
+
+    //This is a basic navbar component. It took me sometime here to learn styling with Bulma CSS framework
     const navItemClasses = "navbar-item has-text-weight-semibold is-tab has-text-grey-dark"
 
     return (

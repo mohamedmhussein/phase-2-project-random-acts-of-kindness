@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 
 function MyKindness({ currentUser, handleClick, dataChange }) {
 
-    // using a state of an Array of my kindness acts
+    // using a state of an Array of my kindness acts (posts)
     const [myPostsArray, setMyPostsArray] = useState([])
+    //Getting all my kindness acts from the server
     useEffect(() => {
         fetch("http://localhost:3000/users")
             .then(res => res.json())
@@ -12,9 +13,9 @@ function MyKindness({ currentUser, handleClick, dataChange }) {
                 extractUserData(data)
             })
     }, [dataChange, currentUser])
-    // extracting the data from the fetching
 
 
+    // filtering the data to only extract the acts of the current user
     function extractUserData(data) {
         setMyPostsArray(data.filter(item => item.user === currentUser))
     }
