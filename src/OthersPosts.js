@@ -20,7 +20,7 @@ function OthersPosts({ currentUser, handleClick, dataChange }) {
         //Filtering for posts of users excluding the currentUser
         const otherUsers = data.filter(item => item.user !== currentUser)
         //Forming posts of all users excluding the current one ( .map)
-        const theOtherPosts = otherUsers.map(user => <Post key={user.id} act={user.act} title={user.title} user={user.user} like={user.like} IDidIt={user.IDidIt} IWillDoIt={user.IWillDoIt} id={user.id} handleClick={handleClick} />)
+        const theOtherPosts = otherUsers.slice(0).reverse().map(user => <Post key={user.id} act={user.act} title={user.title} user={user.user} like={user.like} IDidIt={user.IDidIt} IWillDoIt={user.IWillDoIt} id={user.id} handleClick={handleClick} />)
         //Updating the state variabl 
         setPosts(theOtherPosts)
     }
