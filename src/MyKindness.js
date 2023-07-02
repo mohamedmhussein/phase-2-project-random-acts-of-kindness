@@ -5,7 +5,6 @@ function MyKindness({ currentUser, handleClick, dataChange }) {
 
     const backgroundStyle = {
         backgroundColor: "#ffb6f0",
-        height: "1000vh",
         backgroundSize: "cover",
     }
 
