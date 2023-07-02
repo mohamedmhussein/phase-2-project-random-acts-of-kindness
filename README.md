@@ -1,43 +1,64 @@
-# Getting Started with Create React App
+# **Random Acts of Kindness**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Random Acts of Kindness App is a web application I made for phase-2 of my software development degree at Flatiron School that allows users to share and discover acts of kindness. This README file provides an overview of the app's features and instructions for setting up and running the application.
 
-## Available Scripts
+# **Features**
+- Post Acts of Kindness: Users can create and share their own acts of kindness with the community. Each post can include a description of the act, and optionally, any relevant media such as photos or videos.
 
-In the project directory, you can run:
+- Discover Acts of Kindness: Users can explore and view acts of kindness posted by other users. The app provides a feed or timeline where users can scroll through the acts, read their descriptions, and view any accompanying media.
 
-### `npm start`
+- Interact with Acts: Users can interact with the acts of kindness posted by others through interactive buttons. These buttons allow users to express their appreciation for an act, letting others know who else did it, or even express the intention to do it.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# **Overview**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Watch the below gif for an quick overview of the website.
+![](./images/overview.gif)
 
-### `npm test`
+# Getting Started
+To get started with the Random Acts of Kindness App on your local machine, follow these instructions:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites
 
-### `npm run build`
+ - Node.js: Make sure you have Node.js installed on your computer. You can download it from the official Node.js website.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd phase-2-project-random-acts-of-kindness`
+3. Install the dependencies: `npm install`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. Start the development server: `npm start`
+2. Open a web browser and go to: `http://localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# CSS Framework
+The React Kindness App utilizes the [**Bulma**](bulma.io)  CSS framework for styling and layout purposes. Bulma is a modern, lightweight CSS framework that provides a responsive grid system and a set of predefined styles and components.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To take advantage of Bulma's features and styles, the necessary CSS files have been imported in the html file:  `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+If you are new to Bulma, please refer to the official Bulma documentation for more information on how to utilize its features and customize the styles according to your needs.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Backend Repository
+
+The backend repository can be found [HERE](https://github.com/mohamedmhussein/phase-2-project-random-acts-of-kindness-backend)
+
+# Contributing
+If you'd like to contribute to the Random Acts of Kindness App, please follow these guidelines:
+
+1. Fork the repository and create a new branch.
+2. Make your changes and ensure that the app still runs correctly.
+3. Write tests for any new features or modifications.
+4. Submit a pull request detailing your changes and explaining the purpose of the pull request.
+
+# License
+The React Kindness App is released under the MIT License. See the [LICENSE](https://github.com/mohamedmhussein/phase-2-project-random-acts-of-kindness/blob/main/LICENSE) file for more details.
+
+# Acknowledgements
+- This app was developed using React, a JavaScript library for building user interfaces.
+- Thanks to the open-source community for providing useful resources and inspiration for creating this app.
+  
+
 
 ## Learn More
 
