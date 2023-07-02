@@ -89,9 +89,9 @@
       "user": "Kelly",
       "title": "Paying for a Stranger",
       "act": "A stranger's generosity at the grocery store: One day, a young mother named Maria was shopping at her local grocery store with her two young children. As she reached the checkout counter, she realized that she had forgotten her wallet at home. Feeling embarrassed and anxious, she was about to leave when I stepped forward. I offered to pay for Maria's groceries, insisting that it was her pleasure to help. Grateful and moved by the gesture, Maria accepted the kind offer. That provided immediate relief to Maria, but also restored her faith in the kindness of strangers.",
-      "like": 15,
-      "IDidIt": 15,
-      "IWillDoIt": 25,
+      "like": 16,
+      "IDidIt": 16,
+      "IWillDoIt": 26,
       "id": 10,
       "undefined": null
     },
@@ -103,6 +103,15 @@
       "IDidIt": 0,
       "IWillDoIt": 0,
       "id": 11
+    },
+    {
+      "user": "Mohamed",
+      "title": "New Act of Kindness",
+      "act": "In a world filled with uncertainties, I found solace in bringing happiness to those who needed it the most - children facing challenging circumstances. Inspired by their innocence and resilience, I decided to organize a special event called 'Day of Dreams'. With the support of my community, we transformed a local park into a magical wonderland, complete with games, face painting, and delightful treats. Children from orphanages, hospitals, and underprivileged backgrounds were invited to immerse themselves in a day of pure joy and laughter. Seeing their eyes light up with wonder and their laughter fill the air brought an indescribable warmth to my heart. For that one day, they forgot their worries and simply embraced the joy of being children. The experience taught me that sometimes, the simplest acts of kindness can have the most profound impact, reminding us all of the power we hold to make a difference in someone's life, one smile at a time.",
+      "like": 0,
+      "IDidIt": 0,
+      "IWillDoIt": 0,
+      "id": 12
     }
   ]
 }

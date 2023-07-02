@@ -9,11 +9,6 @@ The Random Acts of Kindness App is a web application I made for phase-2 of my so
 
 - Interact with Acts: Users can interact with the acts of kindness posted by others through interactive buttons. These buttons allow users to express their appreciation for an act, letting others know who else did it, or even express the intention to do it.
 
-# **Overview**
-
-Watch the below gif for an quick overview of the website.
-![](./images/overview.gif)
-
 # Getting Started
 To get started with the Random Acts of Kindness App on your local machine, follow these instructions:
 
