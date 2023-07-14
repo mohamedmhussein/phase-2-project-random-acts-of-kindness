@@ -12,7 +12,7 @@ function MyKindness({ currentUser, handleClick, dataChange }) {
     const [myPostsArray, setMyPostsArray] = useState([])
     //Getting all my kindness acts from the server
     useEffect(() => {
-        fetch("http://localhost:3000/users")
+        fetch("https://random-acts-of-kindness-server.onrender.com/users")
             .then(res => res.json())
             .then(data => {
                 extractUserData(data)

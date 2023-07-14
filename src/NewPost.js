@@ -24,7 +24,7 @@ function NewPost({ user, dataChange, setDataChange }) {
             body: JSON.stringify(formData)
         }
         // Posting the user input to the server (notice triggering data change to re-rendering the linked components.)
-        fetch("http://localhost:3000/users/", configObj)
+        fetch("https://random-acts-of-kindness-server.onrender.com/users", configObj)
             .then(r => r.json())
             .then(data => {
                 history.push("/MyKindness")

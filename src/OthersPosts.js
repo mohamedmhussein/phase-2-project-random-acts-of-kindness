@@ -5,7 +5,7 @@ function OthersPosts({ currentUser, handleClick, dataChange }) {
 
     //Fetching the all posts for all users
     useEffect(() => {
-        fetch("http://localhost:3000/users")
+        fetch("https://random-acts-of-kindness-server.onrender.com/users")
             .then(res => res.json())
             .then(data => {
                 showOtherPosts(data)

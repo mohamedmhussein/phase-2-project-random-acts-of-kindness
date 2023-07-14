@@ -39,7 +39,7 @@ function App() {
     }
 
     //Patch request updating the button count
-    fetch(`http://localhost:3000/users/${id}`, configObj)
+    fetch(`https://random-acts-of-kindness-server.onrender.com/users/${id}`, configObj)
       .then(r => r.json()).then(data => setDataChange(!dataChange))
   }
 
